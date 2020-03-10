@@ -18,6 +18,7 @@ body * {
 
 ul, li {
   list-style: none;
+  padding: 0;
 }
 
 .bannerLogo {
@@ -40,6 +41,36 @@ ul, li {
 
 #hyperbola path {
   stroke-dashoffset: 0;
+}
+
+.hyperbola_web nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hyperbola_web nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+}
+
+.hyperbola_web nav .logo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hyperbola_web nav .sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hyperbola_web nav .sections li {
