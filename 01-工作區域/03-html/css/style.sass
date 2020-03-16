@@ -24,10 +24,10 @@ ul , li
 #hyperbola path
     stroke-dashoffset: 0
 
-
-
-.hyperbola_web
-    
+header
+    position: fixed
+    width: 100%
+    z-index: -1
 .nav-bar
     width: 100%
     display: grid
@@ -70,26 +70,69 @@ ul , li
             @media screen and ( max-width: 580px )
                 font-size: 12px
 main
+    padding-top: 100vh
     .container
         .about
+            background-color: black
             height: 100vh
-            background-color: lightyellow
             display: grid
             grid-template-areas: "figure content" "special special"
             grid-template-rows: 2fr 1fr
             grid-template-columns: 2fr 1fr
             .figure
-                background-color: yellow
+                display: grid
                 grid-area: figure
-                padding: 30px
+                padding: 5px
+                align-items: center
                 img
                     width: 100%
             .content
-                background-color: green
                 grid-area: content
+                display: flex
+                flex-flow: column
+                justify-content: center
+                .text-container
+                    text-align: center
+                    .title
+                        font-size: 30px
+                        font-weight: 600
+                        margin: 5px 0 30px
+                    .text
+                        margin: 5px 0 10px
+                        letter-spacing: 2px
+                    .sub-text
+                        font-weight: 600
+                        margin: 5px 0
             .special
-                background-color: red
                 grid-area: special
+                justify-content: space-around
+                align-items: center
+                display: grid
+                grid-template-areas: "item1 item2 item3 item4 item5"
+                .item
+                    width: 200px
+                    height: 200px
+                    background-color: lightgreen
+                    border-radius: 50%
+                    border: 5px solid #fff
+                    display: grid
+                    justify-content: center
+                    align-items: center
+                    font-size: 16px
+                    font-weight: 600
+                    @media screen and ( max-width: 960px )
+                        width: 100px
+                        height: 100px
+                .item1
+                    grid-area: item1
+                .item2
+                    grid-area: item2
+                .item3
+                    grid-area: item3
+                .item4
+                    grid-area: item4
+                .item5
+                    grid-area: item5
 
 
 

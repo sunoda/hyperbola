@@ -42,6 +42,12 @@ ul, li {
   stroke-dashoffset: 0;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
 .nav-bar {
   width: 100%;
   display: -ms-grid;
@@ -142,9 +148,13 @@ ul, li {
   }
 }
 
+main {
+  padding-top: 100vh;
+}
+
 main .container .about {
+  background-color: black;
   height: 100vh;
-  background-color: lightyellow;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "figure content" "special special";
@@ -155,11 +165,15 @@ main .container .about {
 }
 
 main .container .about .figure {
-  background-color: yellow;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: figure;
-  padding: 30px;
+  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .container .about .figure img {
@@ -167,17 +181,108 @@ main .container .about .figure img {
 }
 
 main .container .about .content {
-  background-color: green;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container .about .content .text-container {
+  text-align: center;
+}
+
+main .container .about .content .text-container .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 5px 0 30px;
+}
+
+main .container .about .content .text-container .text {
+  margin: 5px 0 10px;
+  letter-spacing: 2px;
+}
+
+main .container .about .content .text-container .sub-text {
+  font-weight: 600;
+  margin: 5px 0;
 }
 
 main .container .about .special {
-  background-color: red;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: special;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "item1 item2 item3 item4 item5";
+}
+
+main .container .about .special .item {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 960px) {
+  main .container .about .special .item {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+main .container .about .special .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: item1;
+}
+
+main .container .about .special .item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: item2;
+}
+
+main .container .about .special .item3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: item3;
+}
+
+main .container .about .special .item4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: item4;
+}
+
+main .container .about .special .item5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: item5;
 }
 /*# sourceMappingURL=style.css.map */
