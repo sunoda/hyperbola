@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  background-color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300vh;
+}
+
+body * {
+  color: white;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bannerLogo {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hyperbola {
+  width: 1100px;
+  height: 300px;
+}
+
+#hyperbola path {
+  stroke-dashoffset: 0;
+}
+
+.nav-bar {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logo section lang";
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar {
+    -ms-grid-columns: 80px 5fr 110px;
+        grid-template-columns: 80px 5fr 110px;
+  }
+}
+
+.nav-bar .item {
+  padding: 10px 20px;
+}
+
+.nav-bar .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.nav-bar .logo img {
+  width: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar .logo img {
+    width: 30px;
+  }
+}
+
+.nav-bar .item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: section;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.nav-bar .lang {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: lang;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.nav-bar .lang img {
+  margin: 0 5px;
+  width: 25px;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar .lang img {
+    width: 20px;
+  }
+}
+
+.nav-bar ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.nav-bar ul li {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar ul li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .nav-bar ul li {
+    font-size: 12px;
+  }
+}
+
+main .container .about {
+  height: 100vh;
+  background-color: lightyellow;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "figure content" "special special";
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+main .container .about .figure {
+  background-color: yellow;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: figure;
+  padding: 30px;
+}
+
+main .container .about .figure img {
+  width: 100%;
+}
+
+main .container .about .content {
+  background-color: green;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+}
+
+main .container .about .special {
+  background-color: red;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: special;
+}
+/*# sourceMappingURL=style.css.map */

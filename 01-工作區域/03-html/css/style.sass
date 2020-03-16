@@ -3,14 +3,16 @@
 body
     margin: 0
     background-color: black
-    display: flex
+    // display: flex
     align-items: center
     justify-content: center
+    height: 300vh
     *
         color: white
 ul , li
     list-style: none
     padding: 0
+    margin: 0
 .bannerLogo
     height: 100vh
     display: flex
@@ -22,22 +24,73 @@ ul , li
 #hyperbola path
     stroke-dashoffset: 0
 
+
+
 .hyperbola_web
-    header
-    nav
-        width: 100%
-        display: flex
-        flex-direction: row
-        .logo
-            display: flex
-            // height: 40px
-            width: 30px
-            img
-                display: flex
-        .sections
-            display: flex
-            li
-                display: inline-block
-                font-size: 22px
+    
+.nav-bar
+    width: 100%
+    display: grid
+    grid-template-areas: "logo section lang"
+    position: fixed
+    align-items: center
+    @media screen and ( max-width: 960px )
+        grid-template-columns: 80px 5fr 110px
+    .item
+        padding: 10px 20px
+    .logo
+        grid-area: logo
+        img
+            width: 40px
+            @media screen and ( max-width: 960px )
+                width: 30px
+    .item2
+        grid-area: section
+        justify-content: center
+        align-items: center
+        padding: 0 20px
+    .lang
+        grid-area: lang
+        justify-self: end
+        img
+            margin: 0 5px
+            width: 25px
+            @media screen and ( max-width: 960px )
+                width: 20px
+    ul
+        display: grid
+        grid-template-columns: repeat(5 , 1fr)
+        justify-content: center
+        align-items: center
+        text-align: center
+        li
+            font-size: 22px
+            @media screen and ( max-width: 960px )
+                font-size: 16px
+            @media screen and ( max-width: 580px )
+                font-size: 12px
+main
+    .container
+        .about
+            height: 100vh
+            background-color: lightyellow
+            display: grid
+            grid-template-areas: "figure content" "special special"
+            grid-template-rows: 2fr 1fr
+            grid-template-columns: 2fr 1fr
+            .figure
+                background-color: yellow
+                grid-area: figure
+                padding: 30px
+                img
+                    width: 100%
+            .content
+                background-color: green
+                grid-area: content
+            .special
+                background-color: red
+                grid-area: special
+
+
 
 
