@@ -12,6 +12,7 @@ body {
 
 body * {
   color: white;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 ul, li {
@@ -165,6 +166,9 @@ main .container .about {
 }
 
 main .container .about .figure {
+  background-color: yellow;
+  background-image: url("../img/04-background/20200206105813-office.jpg");
+  background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
@@ -174,6 +178,9 @@ main .container .about .figure {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
 main .container .about .figure img {
@@ -194,6 +201,7 @@ main .container .about .content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 10px;
 }
 
 main .container .about .content .text-container {
@@ -203,17 +211,17 @@ main .container .about .content .text-container {
 main .container .about .content .text-container .title {
   font-size: 30px;
   font-weight: 600;
-  margin: 5px 0 30px;
+  margin: 5px 0 10px;
 }
 
 main .container .about .content .text-container .text {
-  margin: 5px 0 10px;
+  margin: 10px 0;
   letter-spacing: 2px;
 }
 
 main .container .about .content .text-container .sub-text {
   font-weight: 600;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 main .container .about .special {
@@ -253,6 +261,13 @@ main .container .about .special .item {
   main .container .about .special .item {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .container .about .special .item {
+    width: 70px;
+    height: 70px;
   }
 }
 
