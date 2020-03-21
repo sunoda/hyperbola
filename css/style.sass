@@ -9,7 +9,9 @@ body
     height: 300vh
     *
         color: white
-        font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Noto Sans TC', sans-serif
+.container_bg
+    background-color: #000
 ul , li
     list-style: none
     padding: 0
@@ -84,7 +86,7 @@ main
                 background-color: yellow
                 
                 background-image: url('../img/04-background/20200206105813-office.jpg')
-                background-repeat: no-repeat;
+                background-repeat: no-repeat
                 display: grid
                 grid-area: figure
                 padding: 5px
@@ -119,8 +121,8 @@ main
                 display: grid
                 grid-template-areas: "item1 item2 item3 item4 item5"
                 .item
-                    width: 200px
-                    height: 200px
+                    width: 180px
+                    height: 180px
                     background-color: lightgreen
                     border-radius: 50%
                     border: 5px solid #fff
@@ -148,4 +150,97 @@ main
 
 
 
+$red: #e74c3c
+$blue : #2980b9
+$midnight : #2c3e50
+$green: #7b3
+.exhibition
+    margin-top: 100px
+    height: 100vh
+div#timeline 
+    background-color: lighten($blue,20%)
+    margin-top: 80px
+    height: 10px
+    width: 100%
+    position: relative
+    //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
+    .inside 
+        position: absolute
+        height: 4px
+        background-color: #fff
+        width: 0%
+        top: 3px
+        left: 0
+    .dot
+        //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
+        z-index: 99
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        position: absolute
+        top: -15px
+        text-align: center
+        cursor: pointer
+        transition : 0.3s ease-in-out
+        &:nth-child(1)
+            left: 11%
+            background-color: $midnight
+        &:nth-child(2)
+            left: 22%
+            background-color: $red
+        &:nth-child(3)
+            left: 33%
+            background-color: $green
+        &:nth-child(4)
+            left: 44%
+            background-color: darken($blue,10%)
+        &:nth-child(5)
+            left: 55%
+            background-color: $midnight
+        &:nth-child(6)
+            left: 66%
+            background-color: $red
+        &:nth-child(7)
+            left: 77%
+            background-color: $green
+        &:nth-child(8)
+            left: 88%
+            background-color: darken($blue,10%)
+        &:hover 
+            transform: scale(1.2)
+        span
+            display: inline-block
+            margin-top: 10px
+            width: 20px
+            height: 20px
+            background-color: #fff
+            position: relative
+            border-radius: 50%
+            box-shadow: 0 0 5px rgba(0,0,0,0.2)
+        date 
+            font-family: roboto
+            font-size: 1.1rem
+            display: block
+            position: relative
+            top: -60px
+            text-align: center
 
+.exhibition_img
+    display: none
+    position: relative
+    top: 30px
+    background-color: #000
+    padding: 20px
+    margin: auto
+    max-width : 960px
+    date 
+        display: block
+        text-align: right
+    h2 
+        font-family: merriweather, sans-serif
+        font-size: 2rem
+        padding: 10px 0
+        border-bottom: solid #111 2px
+        margin-bottom: 20px
+    img
+        width: 100%
