@@ -6,7 +6,7 @@ body
     // display: flex
     align-items: center
     justify-content: center
-    height: 300vh
+    height: 800vh
     *
         color: white
         font-family: 'Noto Sans TC', sans-serif
@@ -33,10 +33,12 @@ header
     z-index: -1
 .nav-bar
     width: 100%
+    background-color: black
     display: grid
     grid-template-areas: "logo section lang"
     position: fixed
     align-items: center
+    z-index: 99
     @media screen and ( max-width: 960px )
         grid-template-columns: 80px 5fr 110px
     .item
@@ -148,99 +150,368 @@ main
                 .item5
                     grid-area: item5
 
-
-
-$red: #e74c3c
-$blue : #2980b9
-$midnight : #2c3e50
-$green: #7b3
-.exhibition
-    margin-top: 100px
-    height: 100vh
-div#timeline 
-    background-color: lighten($blue,20%)
-    margin-top: 80px
-    height: 10px
-    width: 100%
-    position: relative
-    //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
-    .inside 
-        position: absolute
-        height: 4px
-        background-color: #fff
-        width: 0%
-        top: 3px
-        left: 0
-    .dot
-        //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
-        z-index: 99
-        width: 40px
-        height: 40px
-        border-radius: 50%
-        position: absolute
-        top: -15px
-        text-align: center
-        cursor: pointer
-        transition : 0.3s ease-in-out
-        &:nth-child(1)
-            left: 11%
-            background-color: $midnight
-        &:nth-child(2)
-            left: 22%
-            background-color: $red
-        &:nth-child(3)
-            left: 33%
-            background-color: $green
-        &:nth-child(4)
-            left: 44%
-            background-color: darken($blue,10%)
-        &:nth-child(5)
-            left: 55%
-            background-color: $midnight
-        &:nth-child(6)
-            left: 66%
-            background-color: $red
-        &:nth-child(7)
-            left: 77%
-            background-color: $green
-        &:nth-child(8)
-            left: 88%
-            background-color: darken($blue,10%)
-        &:hover 
-            transform: scale(1.2)
-        span
-            display: inline-block
-            margin-top: 10px
-            width: 20px
-            height: 20px
-            background-color: #fff
+        $red: #e74c3c
+        $blue : #2980b9
+        $midnight : #2c3e50
+        $green: #7b3
+        .exhibition
+            margin-top: 100px
+        div#timeline 
+            background-color: lighten($blue,20%)
+            margin-top: 80px
+            height: 10px
+            width: 100%
             position: relative
-            border-radius: 50%
-            box-shadow: 0 0 5px rgba(0,0,0,0.2)
-        date 
-            font-family: roboto
-            font-size: 1.1rem
-            display: block
+            //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
+            .inside 
+                position: absolute
+                height: 4px
+                background-color: #fff
+                width: 0%
+                top: 3px
+                left: 0
+            .dot
+                //box-shadow: 0 0 5px rgba(0,0,0,0.2) inset
+                z-index: 5
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                position: absolute
+                top: -15px
+                text-align: center
+                cursor: pointer
+                transition : 0.3s ease-in-out
+                &:nth-child(1)
+                    left: 11%
+                    background-color: $midnight
+                &:nth-child(2)
+                    left: 22%
+                    background-color: $red
+                &:nth-child(3)
+                    left: 33%
+                    background-color: $green
+                &:nth-child(4)
+                    left: 44%
+                    background-color: darken($blue,10%)
+                &:nth-child(5)
+                    left: 55%
+                    background-color: $midnight
+                &:nth-child(6)
+                    left: 66%
+                    background-color: $red
+                &:nth-child(7)
+                    left: 77%
+                    background-color: $green
+                &:nth-child(8)
+                    left: 88%
+                    background-color: darken($blue,10%)
+                &:hover 
+                    transform: scale(1.2)
+                span
+                    display: inline-block
+                    margin-top: 10px
+                    width: 20px
+                    height: 20px
+                    background-color: #fff
+                    position: relative
+                    border-radius: 50%
+                    box-shadow: 0 0 5px rgba(0,0,0,0.2)
+                date 
+                    font-family: roboto
+                    font-size: 1.1rem
+                    display: block
+                    position: relative
+                    top: -60px
+                    text-align: center
+        .exhibition_img
+            display: none
             position: relative
-            top: -60px
-            text-align: center
+            top: 30px
+            background-color: #000
+            padding: 20px
+            margin: auto
+            max-width : 960px
+            z-index: 10
+            &:nth-child(1)
+                display: block 
+            date 
+                display: block
+                text-align: right
+            h2 
+                font-family: merriweather, sans-serif
+                font-size: 2rem
+                padding: 10px 0
+                border-bottom: solid #111 2px
+                margin-bottom: 20px
+            img
+                width: 100%
+            
+        .fiber
+            height: 70vh
+            display: grid
+            margin-top: 100px
+            // background-color: yellow
+            grid-template-areas: "text_content empty" "fiber_type empty"
+            grid-template-rows: 1fr 3fr
+            grid-template-columns: 3fr 1fr
+            .text_content
+                grid-area: text_content
+                // background-color: orange
+                margin-top: 50px
+                display: grid
+                span
+                    font-size: 20px
+            .fiber_type
+                grid-area: fiber_type
+                // background-color: red
+                display: grid
+                grid-template-areas: "item1 item2 item3" "item4 item5 item6"
+                grid-template-rows: 1fr 1fr
+                // grid-template-columns: 1fr 1fr 1fr
+                justify-content: space-around
+                align-items: center
+                .item
+                    width: 180px
+                    height: 180px
+                    background-color: lightgreen
+                    border-radius: 50%
+                    border: 5px solid #fff
+                    display: grid
+                    text-align: center
+                    justify-content: center
+                    align-items: center
+                    font-size: 16px
+                    font-weight: 600
+                    @media screen and ( max-width: 960px )
+                        width: 100px
+                        height: 100px
+                    @media screen and ( max-width: 500px )
+                        width: 70px
+                        height: 70px
+                .item1
+                    grid-area: item1
+                .item2
+                    grid-area: item2
+                .item3
+                    grid-area: item3
+                .item4
+                    grid-area: item4
+                .item5
+                    grid-area: item5
+                .item6
+                    grid-area: item6
+        .products
+            display: grid
+            height: 90vh
+            grid-template-areas: "title" "product_types" "product"
+            grid-template-columns: 1fr
+            grid-template-rows:  1fr 1fr 8fr
 
-.exhibition_img
+            .title
+                grid-area: title
+            .product_types
+                grid-area: product_types
+                display: grid
+                grid-template-areas: "type1 type2 type3 type4 type5 type6"
+                text-align: center
+                align-items: center
+                .type1
+                    grid-area: type1
+                .type2
+                    grid-area: type2
+                .type3
+                    grid-area: type3
+                .type4
+                    grid-area: type4
+                .type5
+                    grid-area: type5
+                .type6
+                    grid-area: type6
+                
+            .product
+                grid-area: product
+                display: grid
+                justify-content: space-around
+                align-items: center
+                grid-template-areas: "img_1 img_2 img_3 img_4 img_5 img_6" "img_7 img_8 img_9 img_10 img_11 img_12" "img_13 img_14 img_15 img_16 img_17 img_18" "img_19 img_20 img_21 img_22 img_23 img_24" "img_25 img_26 img_27 img_28 img_29 img_30"
+                .product_img
+                    grid-area: product_img
+                    width: 100px
+                    height: 100px
+                    background-color: #85ff55
+                .img_1
+                    grid-area: img_1
+                .img_2
+                    grid-area: img_2
+                .img_3
+                    grid-area: img_3
+                .img_4
+                    grid-area: img_4
+                .img_5
+                    grid-area: img_5
+                .img_6
+                    grid-area: img_6
+                .img_7
+                    grid-area: img_7
+                .img_8
+                    grid-area: img_8
+                .img_9
+                    grid-area: img_9
+                .img_10
+                    grid-area: img_10
+                .img_11
+                    grid-area: img_11
+                .img_12
+                    grid-area: img_12
+                .img_13
+                    grid-area: img_13
+                .img_14
+                    grid-area: img_14
+                .img_15
+                    grid-area: img_15
+                .img_16
+                    grid-area: img_16
+                .img_17
+                    grid-area: img_17
+                .img_18
+                    grid-area: img_18
+                .img_19
+                    grid-area: img_19
+                .img_20
+                    grid-area: img_20
+                .img_21
+                    grid-area: img_21
+                .img_22
+                    grid-area: img_22
+                .img_23
+                    grid-area: img_23
+                .img_24
+                    grid-area: img_24
+                .img_25
+                    grid-area: img_25
+                .img_26
+                    grid-area: img_26
+                .img_27
+                    grid-area: img_27
+                .img_28
+                    grid-area: img_28
+                .img_29
+                    grid-area: img_29
+                .img_30
+                    grid-area: img_30
+
+%transition_all_03s
+  transition: all .3s ease
+
+%backface_visibility_hidden
+  backface-visibility: hidden
+  -webkit-backface-visibility: hidden
+
+*, *:before, *:after 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+.swiper-container 
+  width: 100%
+  height: 28vw
+  transition:opacity .6s ease
+  &.swiper-container-coverflow
+    padding-top: 2%
+  &.loading
+    opacity: 0
+    visibility: hidden
+  &:hover
+    .swiper-button-prev,
+    .swiper-button-next
+      transform: translateX(0)
+      opacity: 1
+      visibility: visible
+// .swiper-wrapper
+
+
+.swiper-slide
+  background-position: center
+  background-size: cover
+  .slide-inner
+    
+  
+  .entity-img
     display: none
-    position: relative
-    top: 30px
-    background-color: #000
-    padding: 20px
-    margin: auto
-    max-width : 960px
-    date 
-        display: block
-        text-align: right
-    h2 
-        font-family: merriweather, sans-serif
-        font-size: 2rem
-        padding: 10px 0
-        border-bottom: solid #111 2px
-        margin-bottom: 20px
-    img
-        width: 100%
+  
+  .content
+    position: absolute
+    top: 40%
+    left: 0
+    width: 50%
+    padding-left: 5%
+    color: #fff
+    .title
+      font-size: 2.6em
+      font-weight: bold
+      margin-bottom: 30px
+    .caption
+      display: block
+      font-size: 13px
+      line-height: 1.4
+[class^="swiper-button-"]
+  width: 44px
+  opacity: 0
+  visibility: hidden
+  @extend %transition_all_03s
+.swiper-button-prev
+  transform: translateX(50px)
+
+.swiper-button-next
+  transform: translateX(-50px)
+
+.swiper-container-horizontal
+  >.swiper-pagination-bullets
+    .swiper-pagination-bullet
+      margin: 0 9px
+      position: relative
+      width: 12px
+      height: 12px
+      background-color: #fff
+      opacity: .4
+      @extend %transition_all_03s
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 18px
+        height: 18px
+        transform: translate(-50%, -50%)
+        border: 0px solid #fff
+        border-radius: 50%
+        @extend %transition_all_03s
+      
+      &:hover,
+      &.swiper-pagination-bullet-active
+        opacity: 1
+      
+      &.swiper-pagination-bullet-active
+        &::before
+          border-width: 1px
+
+
+// Mediaqueries
+@media(max-width:1180px)
+  .swiper-slide
+    .content
+      .title
+        font-size: 25px
+    
+      .caption
+        font-size: 12px
+@media(max-width:1023px)
+  .swiper-container
+    height: 40vw
+    &.swiper-container-coverflow
+      padding-top: 0
+    
+
+
+
+
