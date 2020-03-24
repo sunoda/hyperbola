@@ -303,6 +303,7 @@ main
         .products
             display: grid
             height: 90vh
+            margin-top: 50px
             grid-template-areas: "title" "product_types" "product"
             grid-template-columns: 1fr
             grid-template-rows:  1fr 1fr 8fr
@@ -331,74 +332,18 @@ main
             .product
                 grid-area: product
                 display: grid
-                justify-content: space-around
+                // justify-content: center
                 align-items: center
-                grid-template-areas: "img_1 img_2 img_3 img_4 img_5 img_6" "img_7 img_8 img_9 img_10 img_11 img_12" "img_13 img_14 img_15 img_16 img_17 img_18" "img_19 img_20 img_21 img_22 img_23 img_24" "img_25 img_26 img_27 img_28 img_29 img_30"
+                grid-template-columns: repeat(6 ,1fr)
                 .product_img
-                    grid-area: product_img
+                    // grid-area: product_img
+                    display: grid
+                    justify-self: center
                     width: 100px
-                    height: 100px
+                    border: 4px #fff solid
                     background-color: #85ff55
-                .img_1
-                    grid-area: img_1
-                .img_2
-                    grid-area: img_2
-                .img_3
-                    grid-area: img_3
-                .img_4
-                    grid-area: img_4
-                .img_5
-                    grid-area: img_5
-                .img_6
-                    grid-area: img_6
-                .img_7
-                    grid-area: img_7
-                .img_8
-                    grid-area: img_8
-                .img_9
-                    grid-area: img_9
-                .img_10
-                    grid-area: img_10
-                .img_11
-                    grid-area: img_11
-                .img_12
-                    grid-area: img_12
-                .img_13
-                    grid-area: img_13
-                .img_14
-                    grid-area: img_14
-                .img_15
-                    grid-area: img_15
-                .img_16
-                    grid-area: img_16
-                .img_17
-                    grid-area: img_17
-                .img_18
-                    grid-area: img_18
-                .img_19
-                    grid-area: img_19
-                .img_20
-                    grid-area: img_20
-                .img_21
-                    grid-area: img_21
-                .img_22
-                    grid-area: img_22
-                .img_23
-                    grid-area: img_23
-                .img_24
-                    grid-area: img_24
-                .img_25
-                    grid-area: img_25
-                .img_26
-                    grid-area: img_26
-                .img_27
-                    grid-area: img_27
-                .img_28
-                    grid-area: img_28
-                .img_29
-                    grid-area: img_29
-                .img_30
-                    grid-area: img_30
+                    img
+                        width: 100%
 
 %transition_all_03s
   transition: all .3s ease
