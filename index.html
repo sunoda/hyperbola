@@ -280,7 +280,7 @@
                             <button class="type btn btn-dark" v-for="item in typeList" v-on:click="typeFilter">{{ item }}</button>
                         </div>
                         <div class="product">
-                            <div class="product_img" v-for="item in products">
+                            <div class="product_img" v-for="item in typeFilter">
                                 <img :src="item.link" alt=""/>
                             </div>
                         </div>
